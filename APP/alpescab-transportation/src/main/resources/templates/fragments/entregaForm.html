@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="entregaForm(titulo, entrega, puntos)">
+    <div class="container border border-2 w-75 p-3">
+        <h3 th:text="${titulo}">Entrega Domicilio</h3>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="idServicio">Servicio (ID)</label>
+                <input type="number" id="idServicio" name="idServicio" class="form-control" th:value="${entrega!=null?entrega.idServicio:''}" required />
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="tarifaDomicilio">Tarifa domicilio</label>
+                <input type="number" step="0.01" id="tarifaDomicilio" name="tarifaDomicilio" class="form-control" th:value="${entrega!=null?entrega.tarifaDomicilio:0}" />
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="ubicacionRestaurante">Ubicación restaurante (dirección)</label>
+                <input type="text" id="ubicacionRestaurante" name="ubicacionRestaurante" class="form-control" th:value="${entrega!=null?entrega.ubicacionRestaurante:''}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="puntoUsuario">Punto usuario (idPunto)</label>
+            <select id="puntoUsuario" name="puntoUsuario" class="form-control">
+                <th:block th:each="p : ${puntos}">
+                    <option th:value="${p.idPunto}" th:text="${p.nombre + ' - ' + p.direccion}"></option>
+                </th:block>
+            </select>
+        </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a th:href="@{/entregas}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

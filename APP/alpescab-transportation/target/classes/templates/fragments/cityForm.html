@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="cityForm(titulo, city)">
+    <div class="container border border-2 w-50 p-3">
+        <h3 th:text="${titulo}">Registrar Ciudad</h3>
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" th:value="${city != null ? city.nombre : ''}" required/>
+        </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a th:href="@{/cities}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

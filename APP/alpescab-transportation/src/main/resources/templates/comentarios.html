@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Comentarios - Usuarios</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+  <h3>Usuarios y Rating</h3>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cédula</th>
+        <th>Rating (promedio)</th>
+        <th># Comentarios</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="u : ${users}">
+        <td th:text="${u.nombre}">Nombre</td>
+        <td th:text="${u.cedula}">1111</td>
+        <td th:text="${u.calificacion}">4.5</td>
+        <td th:text="${cntMap[u.cedula] != null ? cntMap[u.cedula] : 0}">0</td>
+        <td>
+          <a th:href="@{/comentarios/{id}(id=${u.cedula})}" class="btn btn-sm btn-primary">Ver comentarios</a>
+          <a th:href="@{/comentarios/{id}(id=${u.cedula})}" class="btn btn-sm btn-success">Dejar comentario</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a th:href="@{ / }" class="btn btn-secondary">Volver</a>
+</body>
+</html>
+

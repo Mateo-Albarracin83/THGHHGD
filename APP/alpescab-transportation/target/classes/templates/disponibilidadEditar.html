@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Editar Disponibilidad</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container w-50 mt-4">
+    <h2>Editar Disponibilidad</h2>
+
+    <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+    <form th:action="@{/disponibilidades/{id}/edit/save(id=${disponibilidad.idDisponibilidad})}" method="post" th:object="${disponibilidad}">
+        <input type="hidden" th:value="${disponibilidad.idDisponibilidad}" name="idDisponibilidad" />
+
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="date" th:field="*{fecha}" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label>Vehículo (placa)</label>
+            <select name="placa" class="form-control" required>
+                <option value="">-- Seleccione vehículo --</option>
+                <th:block th:each="v : ${vehicles}">
+                    <option th:value="${v.placa}"
+                            th:text="${v.placa + ' - ' + (v.conductor != null ? v.conductor.nombre : 'Sin conductor')}"
+                            th:selected="${v.placa == disponibilidad.vehiculo.placa}"></option>
+                </th:block>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Hora inicio</label>
+            <input type="datetime-local" th:field="*{horaInicio}" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Hora fin</label>
+            <input type="datetime-local" th:field="*{horaFin}" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de servicio</label>
+            <select th:field="*{tipoServicio}" class="form-control" required>
+                <option value="PASAJEROS" th:selected="${disponibilidad.tipoServicio=='PASAJEROS'}">PASAJEROS</option>
+                <option value="MERCANCIAS" th:selected="${disponibilidad.tipoServicio=='MERCANCIAS'}">MERCANCIAS</option>
+                <option value="DOMICILIO" th:selected="${disponibilidad.tipoServicio=='DOMICILIO'}">DOMICILIO</option>
+            </select>
+        </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            <a th:href="@{/disponibilidades}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

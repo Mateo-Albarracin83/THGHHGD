@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BA686364-D8AE-6960-7474-B36D3153C009" name="Rating">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:38:57 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="revisor" id="8E559E86-6331-0EC6-6965-15EC72D24108">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:39:34 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="revisado" id="BA3FE310-BE3C-9204-1893-45AE6779E46D">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:39:42 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comentario" id="4DAA6E05-AE8A-3564-7B5F-51EEC9CA7538">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:39:47 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rating" id="47094A64-1EB9-BE26-64BD-4C0AAF5CBBC5">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:39:54 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="765A885A-19B4-22E3-1401-D2531A538780">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 17:09:50 UTC</createdTime>
+<generatorID>74C8CB30-616D-CB37-559D-A3B04E50B403</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>138A65C9-F872-FD9D-242B-A4664061809B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="F5991E7A-24A7-ECB9-EE71-25D60695E079">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 17:09:50 UTC</createdTime>
+<generatorID>74C8CB30-616D-CB37-559D-A3B04E50B403</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>BBE315E3-F301-621E-5500-1ED4A35122A1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="516ACDFC-1674-B3BA-C46B-3B53C810054C" name="Rating PK">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:40:13 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8E559E86-6331-0EC6-6965-15EC72D24108</attributeRef>
+<attributeRef>BA3FE310-BE3C-9204-1893-45AE6779E46D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

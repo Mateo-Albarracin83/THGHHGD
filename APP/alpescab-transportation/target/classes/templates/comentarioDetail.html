@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Comentarios de usuario</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+  <h3>Comentarios para: <span th:text="${usuario.nombre}"></span> (<span th:text="${usuario.cedula}"></span>)</h3>
+
+  <h5>Comentarios existentes</h5>
+  <table class="table table-sm table-bordered">
+    <thead><tr><th>Fecha</th><th>Servicio</th><th>Revisor</th><th>Rating</th><th>Comentario</th></tr></thead>
+    <tbody>
+      <tr th:each="c : ${comentarios}">
+        <td th:text="${#dates.format(c.fecha, 'yyyy-MM-dd HH:mm')}"></td>
+        <td th:text="${c.servicio != null ? c.servicio.idServicio : ''}"></td>
+        <td th:text="${c.revisor != null ? c.revisor.nombre : ''}"></td>
+        <td th:text="${c.rating}"></td>
+        <td th:text="${c.comentario}"></td>
+      </tr>
+      <tr th:if="${#lists.isEmpty(comentarios)}"><td colspan="5">Sin comentarios</td></tr>
+    </tbody>
+  </table>
+
+  <h5>Dejar un nuevo comentario</h5>
+  <form th:action="@{/comentarios/{cedula}/save(cedula=${usuario.cedula})}" method="post">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Servicio (asociado)</label>
+        <select name="servicioId" class="form-control" required>
+          <option value="">-- Seleccione servicio --</option>
+          <th:block th:each="s : ${servicios}">
+            <option th:value="${s.idServicio}" th:text="${s.idServicio + ' - ' + s.tipo + ' (' + s.horaInicio + ')'}"></option>
+          </th:block>
+        </select>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>Revisor</label>
+        <select name="revisorCedula" class="form-control" required>
+          <option value="">-- Seleccione revisor --</option>
+          <th:block th:each="u : ${users}">
+            <option th:value="${u.cedula}" th:text="${u.nombre + ' (' + u.cedula + ')'}"></option>
+          </th:block>
+        </select>
+      </div>
+
+      <div class="form-group col-md-2">
+        <label>Rating</label>
+        <input type="number" step="0.1" min="0" max="5" name="rating" class="form-control" required />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Comentario</label>
+      <textarea name="comentario" rows="3" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar comentario</button>
+    <a th:href="@{/comentarios}" class="btn btn-secondary">Volver</a>
+  </form>
+</body>
+</html>
+

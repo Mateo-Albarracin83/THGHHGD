@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>RFC3 - Dinero por conductor/vehículo</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+  <h3>RFC3 - Total recibido por conductor y vehículo</h3>
+  <a th:href="@{/stats}" class="btn btn-secondary mb-2">Volver</a>
+
+  <table class="table table-sm table-bordered">
+    <thead><tr><th>Conductor</th><th>Placa</th><th># servicios</th><th>Bruto recibido</th></tr></thead>
+    <tbody>
+      <tr th:each="r : ${rows}">
+        <td th:text="${r['CONDUCTORCEDULA'] ?: r['conductorCedula']}"></td>
+        <td th:text="${r['PLACA'] ?: r['placa']}"></td>
+        <td th:text="${r['SERVICIOS_COUNT'] ?: r['servicios_count']}"></td>
+        <td th:text="${r['BRUTORECIBIDO'] ?: r['brutoRecibido']}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

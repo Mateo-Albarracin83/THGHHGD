@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AlpescabApplication<alpescab-transportation>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.alpescab.AlpescabApplication",
+            "projectName": "alpescab-transportation",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

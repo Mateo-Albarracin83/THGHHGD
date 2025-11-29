@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>RFC2 - Top conductores</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+  <h3>RFC2 - Top 20 conductores (por servicios prestados)</h3>
+  <a th:href="@{/stats}" class="btn btn-secondary mb-2">Volver</a>
+
+  <table class="table table-sm table-bordered">
+    <thead><tr><th>Cédula</th><th>Nombre</th><th>Servicios prestados</th></tr></thead>
+    <tbody>
+      <tr th:each="r : ${rows}">
+        <td th:text="${r['CEDULA'] ?: r['cedula']}"></td>
+        <td th:text="${r['NOMBRE'] ?: r['nombre']}"></td>
+        <td th:text="${r['SERVICIOS_PRESTADOS'] ?: r['servicios_prestados']}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Servicio</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Detalle Servicio - <span th:text="${servicio.idServicio}">ID</span></h2>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5>Información general</h5>
+            <p><strong>Tipo:</strong> <span th:text="${servicio.tipo}">PASAJERO</span></p>
+            <p><strong>Distancia (km):</strong> <span th:text="${servicio.distancia}">0.0</span></p>
+            <p><strong>Tarifa base:</strong> <span th:text="${servicio.tarifa}">0.0</span></p>
+            <p><strong>Valor servicio:</strong> <span th:text="${servicio.valorServicio}">0.0</span></p>
+            <p><strong>Hora inicio:</strong> <span th:text="${servicio.horaInicio}">--</span></p>
+            <p><strong>Hora fin:</strong> <span th:text="${servicio.horaFin != null ? servicio.horaFin : 'No finalizado'}"></span></p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5>Cliente y conductor</h5>
+            <p><strong>Cliente:</strong> <span th:text="${servicio.cliente != null ? servicio.cliente.nombre : 'N/A'}"></span></p>
+            <p><strong>Conductor:</strong> <span th:text="${servicio.conductor != null ? servicio.conductor.nombre : 'Sin asignar'}"></span></p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5>Vehículo asignado</h5>
+            <div th:if="${servicio.vehiculo != null}">
+                <p><strong>Placa:</strong> <span th:text="${servicio.vehiculo.placa}"></span></p>
+                <p><strong>Marca / Modelo:</strong> <span th:text="${servicio.vehiculo.marca + ' / ' + servicio.vehiculo.modelo}"></span></p>
+                <p><strong>Conductor (cedula):</strong> <span th:text="${servicio.vehiculo.conductor != null ? servicio.vehiculo.conductor.cedula : ''}"></span></p>
+            </div>
+            <div th:if="${servicio.vehiculo == null}">
+                <p>Sin vehículo asignado</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5>Puntos del servicio</h5>
+            <table class="table table-sm">
+                <thead>
+                <tr><th>Orden</th><th>Nombre</th><th>Dirección</th></tr>
+                </thead>
+                <tbody>
+                <tr th:each="sp : ${puntosServicio}">
+                    <td th:text="${sp.orden}">1</td>
+                    <td th:text="${sp.punto != null ? sp.punto.nombre : 'N/A'}">Partida</td>
+                    <td th:text="${sp.punto != null ? sp.punto.direccion : ''}">Dirección</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between mb-4">
+        <a th:href="@{/servicios}" class="btn btn-secondary">Volver a lista</a>
+
+        <form th:action="@{|/servicios/${servicio.idServicio}/finish|}" method="post" onsubmit="return confirm('¿Marcar servicio como terminado?');">
+            <button type="submit" class="btn btn-success" th:if="${servicio.horaFin == null}">Marcar terminado</button>
+            <span th:if="${servicio.horaFin != null}" class="text-muted">Servicio finalizado</span>
+        </form>
+    </div>
+</div>
+</body>
+</html>

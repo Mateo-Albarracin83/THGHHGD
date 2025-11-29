@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A1948773-605F-04B4-9AF0-88EA1976BAF8" name="Usuario">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:48:54 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="calificacion:" id="FD11EFBA-326A-C9CA-6E1B-978BC6EB144F">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 22:00:23 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="138A65C9-F872-FD9D-242B-A4664061809B">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:57:17 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="celular" id="3E4053AA-D153-8AAF-E63D-F7753881D3C0">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:53:13 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comentarios" id="52265A04-BDF7-10ED-F0FB-9BDE70B810AE">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 22:00:33 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="BBE315E3-F301-621E-5500-1ED4A35122A1">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:52:58 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="5421CA77-A521-1A13-65B8-75E7137469D1">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:52:05 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="4348B3D9-8812-BB76-57CE-5F7ECA2E537C">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:57:32 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C6EEDFB-F778-C465-63DD-D1D6A3F18680" name="Usuario PK">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:57:30 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>138A65C9-F872-FD9D-242B-A4664061809B</attributeRef>
+<attributeRef>BBE315E3-F301-621E-5500-1ED4A35122A1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

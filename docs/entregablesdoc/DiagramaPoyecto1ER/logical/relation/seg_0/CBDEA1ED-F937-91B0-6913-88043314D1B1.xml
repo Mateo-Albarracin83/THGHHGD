@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Conductor-Vehiculo" directorySegmentName="seg_0" id="CBDEA1ED-F937-91B0-6913-88043314D1B1">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:22:05 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<sourcePk>5C6EEDFB-F778-C465-63DD-D1D6A3F18680</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>07CA661B-E42C-B1D5-3A41-67D551BEDFF8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6A0C1211-D6CA-410D-3FDF-CBFFCD872736</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

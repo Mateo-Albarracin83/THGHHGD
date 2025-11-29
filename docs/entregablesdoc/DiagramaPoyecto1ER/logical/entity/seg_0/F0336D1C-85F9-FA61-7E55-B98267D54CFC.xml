@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F0336D1C-85F9-FA61-7E55-B98267D54CFC" name="Transporte de Mercancias">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:48:13 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>224D45AE-96E5-2AFC-5146-D2BDB8A524B1</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="tarifaMercancias" id="56E4075A-58C4-91B5-1066-C5BFC715F730">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:49:03 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PuntoPartida" id="DBE1C54B-9603-5597-AD59-CE8FE7EB686E">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:50:01 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PuntosLlegada" id="37347FE4-0BDB-CD57-2D61-39882FC55D93">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:50:17 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="longitud" id="DDB852CC-A821-74BB-03B2-306992A107C9">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:48:37 UTC</createdTime>
+<generatorID>AD7D7A5D-05F2-096E-5463-6FE7FC4F6B9F</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>7AC6BC44-3E0A-1C16-3906-FDBC5B3B96D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="latitud" id="E251B261-440A-DDF8-B613-E53D3FAF3177">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:48:37 UTC</createdTime>
+<generatorID>AD7D7A5D-05F2-096E-5463-6FE7FC4F6B9F</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>AB592F1D-C948-5980-08B3-D30FD270702B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="C4871F58-EF1F-7A3F-2BF1-94C5B191DDA9">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-01 02:37:38 UTC</createdTime>
+<generatorID>AD7D7A5D-05F2-096E-5463-6FE7FC4F6B9F</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>725F6525-ACC2-1B1F-EFB8-28C31B0D10E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

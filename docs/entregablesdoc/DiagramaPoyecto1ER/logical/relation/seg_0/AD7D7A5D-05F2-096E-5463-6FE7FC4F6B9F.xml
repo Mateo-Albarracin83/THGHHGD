@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pasajeros-Punto" directorySegmentName="seg_0" id="AD7D7A5D-05F2-096E-5463-6FE7FC4F6B9F">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 06:48:37 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<sourcePk>564EB80C-F470-F5C3-435C-509A5BBFB552</sourcePk>
+<targetPk>1E2601C1-9146-CE93-3169-324F3F8C9F0B</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4BD816B2-E751-19C9-C499-3B819EA478AA</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>F0336D1C-85F9-FA61-7E55-B98267D54CFC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

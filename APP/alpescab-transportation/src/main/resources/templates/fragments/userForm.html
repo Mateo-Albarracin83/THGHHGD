@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="userForm(titulo, usuario)">
+    <div class="container border border-2 w-50 p-3">
+        <h3 th:text="${titulo}">Registrar Usuario</h3>
+
+        <div class="form-group">
+            <label for="cedula">Cédula</label>
+            <input type="text" id="cedula" name="cedula" class="form-control" th:value="${usuario!=null?usuario.cedula:''}" required />
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" th:value="${usuario!=null?usuario.nombre:''}" required />
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" class="form-control" th:value="${usuario!=null?usuario.correo:''}" required />
+        </div>
+
+        <div class="form-group">
+            <label for="celular">Celular</label>
+            <input type="text" id="celular" name="celular" class="form-control" th:value="${usuario!=null?usuario.celular:''}" />
+        </div>
+
+        <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo" class="form-control" required>
+                <option value="CLIENTE" th:selected="${usuario!=null && usuario.tipo=='CLIENTE'}">CLIENTE</option>
+                <option value="CONDUCTOR" th:selected="${usuario!=null && usuario.tipo=='CONDUCTOR'}">CONDUCTOR</option>
+                <option value="AMBOS" th:selected="${usuario!=null && usuario.tipo=='AMBOS'}">AMBOS</option>
+            </select>
+        </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a th:href="@{/users}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

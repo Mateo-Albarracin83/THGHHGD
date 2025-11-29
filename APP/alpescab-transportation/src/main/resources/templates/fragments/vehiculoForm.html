@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="vehicleForm(titulo, vehiculo, conductores, ciudades)">
+    <div class="container border border-2 w-50 p-3">
+        <h3 th:text="${titulo}">Registrar Vehículo</h3>
+
+        <div class="form-group">
+            <label for="placa">Placa</label>
+            <input type="text" id="placa" name="placa" class="form-control" th:value="${vehiculo!=null?vehiculo.placa:''}" required />
+        </div>
+
+        <div class="form-group">
+            <label for="conductor">Conductor</label>
+            <select id="conductor" name="conductor.cedula" class="form-control" required>
+                <th:block th:each="c : ${conductores}">
+                    <option th:value="${c.cedula}" th:text="${c.nombre}"></option>
+                </th:block>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" class="form-control" th:value="${vehiculo!=null?vehiculo.marca:''}" />
+        </div>
+
+        <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" name="modelo" class="form-control" th:value="${vehiculo!=null?vehiculo.modelo:''}" />
+        </div>
+
+        <div class="form-group">
+            <label for="capacidadPasajeros">Capacidad Pasajeros</label>
+            <input type="number" id="capacidadPasajeros" name="capacidadPasajeros" class="form-control" th:value="${vehiculo!=null?vehiculo.capacidadPasajeros:4}" />
+        </div>
+
+        <div class="form-group">
+            <label for="ciudadExpedicion">Ciudad Expedición</label>
+            <select id="ciudadExpedicion" name="ciudadExpedicion.idCiudad" class="form-control">
+                <th:block th:each="ct : ${ciudades}">
+                    <option th:value="${ct.idCiudad}" th:text="${ct.nombre}"></option>
+                </th:block>
+            </select>
+        </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a th:href="@{/vehicles}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="CCC832A4-CC38-17DA-76A7-D55B6BAB004C">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-30 21:29:59 UTC</createdTime>
+<ownerDesignName>DiagramaER</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

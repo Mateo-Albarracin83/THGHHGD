@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>RFC1 Resultado aislamiento</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+  <h3>RFC1 - Resultado (Nivel: <span th:text="${nivel}"></span>)</h3>
+  <p>Cliente: <b th:text="${clienteId}"></b></p>
+  <p>Inicio: <span th:text="${start}"></span> — Fin: <span th:text="${end}"></span></p>
+
+  <h4>Lectura 1 (antes del delay)</h4>
+  <table class="table table-sm table-bordered">
+    <thead><tr><th>ID</th><th>Tipo</th><th>HoraInicio</th><th>HoraFin</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr th:each="s : ${before}">
+        <td th:text="${s.idServicio}"></td>
+        <td th:text="${s.tipo}"></td>
+        <td th:text="${s.horaInicio}"></td>
+        <td th:text="${s.horaFin}"></td>
+        <td th:text="${s.valorServicio}"></td>
+      </tr>
+      <tr th:if="${#lists.isEmpty(before)}"><td colspan="5">Sin resultados</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Lectura 2 (después del delay)</h4>
+  <table class="table table-sm table-bordered">
+    <thead><tr><th>ID</th><th>Tipo</th><th>HoraInicio</th><th>HoraFin</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr th:each="s : ${after}">
+        <td th:text="${s.idServicio}"></td>
+        <td th:text="${s.tipo}"></td>
+        <td th:text="${s.horaInicio}"></td>
+        <td th:text="${s.horaFin}"></td>
+        <td th:text="${s.valorServicio}"></td>
+      </tr>
+      <tr th:if="${#lists.isEmpty(after)}"><td colspan="5">Sin resultados</td></tr>
+    </tbody>
+  </table>
+
+  <a th:href="@{/stats/rfc1/isolation}" class="btn btn-secondary">Volver</a>
+  <a th:href="@{/stats}" class="btn btn-primary">Ir a Stats</a>
+</body>
+</html>

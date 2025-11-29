@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="224D45AE-96E5-2AFC-5146-D2BDB8A524B1" name="Servicio">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:01:28 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="tipo" id="FF6F0072-0E31-DAB4-3F81-6CD1C640BEC8">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:01:45 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="distancia" id="C3B9B85B-6C02-4FD5-3F84-294F41D2E635">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:01:56 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valorServicio" id="98937794-291B-6370-316C-8E94DB217F17">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:02:06 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaInicio" id="CB3A2410-6CCF-CA17-345E-F7CC72165DBF">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:02:24 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaFinalizacion" id="558CFD78-E3BD-7980-081B-C2326F778137">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:02:41 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vehiculo" id="22B68374-5A35-0F8D-210C-ADA7EB407FCC">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:03:04 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dia" id="A2F39B50-F489-4BD4-4D0A-C14FFECF9CCB">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 16:56:00 UTC</createdTime>
+<generatorID>82025FB7-6DF1-2C57-ED0D-F92E96D8660F</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>F6454840-6187-CF9A-DA94-6A8C27FFDA76</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaInicio1" id="83AB8A94-14B0-9DAA-C56C-889F3B87DAD6">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 16:56:00 UTC</createdTime>
+<generatorID>82025FB7-6DF1-2C57-ED0D-F92E96D8660F</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>0493FDDC-A1E5-020B-CC6D-9FE974C73038</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaFin" id="D9CDF6D6-2269-F682-A7D1-64016EDF206C">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 16:56:00 UTC</createdTime>
+<generatorID>82025FB7-6DF1-2C57-ED0D-F92E96D8660F</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<referedAttribute>3F99C743-D836-E711-2EF2-6139D48C7382</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="0ACD02B2-5D5F-69A7-EEB0-AD2E60106B22">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 17:07:55 UTC</createdTime>
+<generatorID>0B8EAB5C-DD6F-1251-13E7-4ECE1DA92AC8</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>138A65C9-F872-FD9D-242B-A4664061809B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="CC7B5646-ED2C-C94A-6912-5585E7290116">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-09-27 17:07:55 UTC</createdTime>
+<generatorID>0B8EAB5C-DD6F-1251-13E7-4ECE1DA92AC8</generatorID>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>BBE315E3-F301-621E-5500-1ED4A35122A1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1E2601C1-9146-CE93-3169-324F3F8C9F0B" name="Servicio PK">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:51:26 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CB3A2410-6CCF-CA17-345E-F7CC72165DBF</attributeRef>
+<attributeRef>558CFD78-E3BD-7980-081B-C2326F778137</attributeRef>
+<attributeRef>22B68374-5A35-0F8D-210C-ADA7EB407FCC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Vehiculo-Pasajeros" directorySegmentName="seg_0" id="E1174B3A-2B47-5594-F032-8EB80EC114F1">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 01:47:02 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<targetPk>AA6F83AF-C264-2959-72F4-A86AA0F98571</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>57C5BC7C-6A6E-8F6E-2EC4-4A4BB2F8EC56</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>6A0C1211-D6CA-410D-3FDF-CBFFCD872736</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

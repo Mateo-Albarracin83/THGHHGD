@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="servicioForm(titulo, servicio, puntos)">
+    <div class="container border border-2 w-75 p-3">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="cliente">Cliente</label>
+                <select id="cliente" name="clienteId" class="form-control">
+                    <th:block th:each="u : ${users}">
+                        <option th:value="${u.cedula}" th:text="${u.nombre}"></option>
+                    </th:block>
+                </select>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="tarjeta">Tarjeta</label>
+                <select id="tarjeta" name="tarjetaNumero" class="form-control">
+                    <option value="">Seleccione un cliente</option>
+                </select>
+
+                <select id="tarjetasAll" style="display:none;">
+                    <th:block th:each="t : ${tarjetas}">
+                        <option th:value="${t.numero}"
+                                th:attr="data-usuario=${t.usuario.cedula}"
+                                th:text="${t.numero + ' - ' + t.nombre}"></option>
+                    </th:block>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row mt-3">
+            <div class="form-group col-md-4">
+                <label for="tipo">Tipo</label>
+                <select id="tipo" name="tipo" class="form-control">
+                    <option value="DOMICILIO">DOMICILIO</option>
+                    <option value="MERCANCIAS">MERCANCIAS</option>
+                    <option value="PASAJEROS">PASAJEROS</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="distancia">Distancia (km)</label>
+                <input type="number" step="0.1" id="distancia" name="distancia" class="form-control" th:value="${servicio!=null?servicio.distancia:1}" />
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="tarifa">Tarifa base</label>
+                <input type="number" step="0.01" id="tarifa" name="tarifa" class="form-control" th:value="${servicio!=null?servicio.tarifa:1000}" />
+            </div>
+        </div>
+
+        <div class="form-row mt-3">
+            <div class="form-group col-md-6">
+                <label for="puntoPartida">Punto partida</label>
+                <select id="puntoPartida" name="puntoPartidaId" class="form-control">
+                    <th:block th:each="p : ${puntos}">
+                        <option th:value="${p.idPunto}" th:text="${p.nombre + ' - ' + p.direccion}"></option>
+                    </th:block>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="puntoDestino">Punto destino</label>
+                <select id="puntoDestino" name="puntoDestinoId" class="form-control">
+                    <th:block th:each="p : ${puntos}">
+                        <option th:value="${p.idPunto}" th:text="${p.nombre + ' - ' + p.direccion}"></option>
+                    </th:block>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <button id="submitButton" type="submit" class="btn btn-primary">Solicitar</button>
+            <a th:href="@{/servicios}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+
+    <!-- SCRIPT: filtra tarjetas según cliente y valida antes de permitir submit -->
+    <script>
+        (function() {
+            const clienteSelect = document.getElementById('cliente');
+            const tarjetaSelect = document.getElementById('tarjeta');
+            const tarjetasAll = document.getElementById('tarjetasAll');
+            const submitButton = document.getElementById('submitButton');
+
+            function populateTarjetas(clienteId) {
+                tarjetaSelect.innerHTML = '';
+                if (!clienteId) {
+                    tarjetaSelect.innerHTML = '<option value="">Seleccione un cliente</option>';
+                    return;
+                }
+                const allOptions = tarjetasAll.querySelectorAll('option');
+                let found = false;
+                allOptions.forEach(opt => {
+                    const owner = opt.getAttribute('data-usuario');
+                    if (owner !== null && owner.toString() === clienteId.toString()) {
+                        tarjetaSelect.appendChild(opt.cloneNode(true));
+                        found = true;
+                    }
+                });
+                if (!found) {
+                    tarjetaSelect.innerHTML = '<option value="">No hay tarjetas registradas para este cliente</option>';
+                }
+            }
+
+            function validateBeforeSubmit(evt) {
+                const val = tarjetaSelect.value;
+                if (!val) {
+                    evt.preventDefault();
+                    alert('Por favor seleccione una tarjeta válida para el cliente seleccionado.');
+                }
+            }
+
+            clienteSelect.addEventListener('change', function() {
+                populateTarjetas(this.value);
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const initCliente = clienteSelect.value;
+                if (initCliente) populateTarjetas(initCliente);
+            });
+
+            // Validación en el evento 'submit' del FORM (más robusto que bindear solo al click del botón)
+            // Busca el form más cercano y agrega listener
+            const form = submitButton.closest('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    validateBeforeSubmit(e);
+                });
+            } else {
+                // fallback: bind al click del botón
+                submitButton.addEventListener('click', validateBeforeSubmit);
+            }
+        })();
+    </script>
+</div>
+</body>
+</html>

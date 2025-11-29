@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Cliente-TarjetaCred" directorySegmentName="seg_0" id="FFCE7DCD-35E7-48B4-4EE5-295BFF6AA27D">
+<createdBy>LENOVO</createdBy>
+<createdTime>2025-08-31 00:41:13 UTC</createdTime>
+<ownerDesignName>DiagramaPoyecto1ER</ownerDesignName>
+<engineerTo>
+<item key="23E9589F-0B32-1866-8B27-74296EAE93FF" value="true"/>
+</engineerTo>
+<sourcePk>5C6EEDFB-F778-C465-63DD-D1D6A3F18680</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4CCC6058-23CB-3D3B-7B12-FEA1B1AE479E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B21067B5-41EB-2A35-2830-2832D8E8E2D7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

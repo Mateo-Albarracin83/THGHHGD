@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Alpescab - Panel</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body style="margin: 0; padding: 0; min-height: 100vh; position: relative; overflow-x: hidden;">
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+        <img src="https://cdn.britannica.com/97/265697-050-FE4E36CD/Bogota-Colombia-skyline-central-cemetery-Cementerio-central.jpg" 
+             style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Bogota">
+    </div>
+
+    <div style="display: flex; flex-direction: column; min-height: 100vh;">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+            <h4 style="font-size: 50px; font-family: Calibri; font-weight: bold; margin-bottom: 20px;">AlpesCab</h4>
+            <img th:src="@{/images/logo.png}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23333'/%3E%3Cpath d='M80 150 Q90 130 110 130 L140 130 Q145 130 150 135 L165 155 Q170 160 175 160 L190 160 Q200 160 205 150 L215 130 Q220 120 210 115 L180 100 Q170 95 160 100 L120 120 Q110 125 105 135 L80 150 Z' fill='%23FF6B35'/%3E%3Ccircle cx='115' cy='180' r='20' fill='%23FF6B35'/%3E%3Ccircle cx='185' cy='180' r='20' fill='%23FF6B35'/%3E%3Ctext x='150' y='240' font-family='Arial' font-size='24' fill='%23FF6B35' text-anchor='middle' font-weight='bold'%3EAlpesCab%3C/text%3E%3C/svg%3E" 
+                 alt="Alpescab" width="300">
+        </div>
+
+        <div style="background-color: #333333; padding: 40px 20px; width: 100%;">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; padding: 0 30px;">
+                <a th:href="@{/cities}" class="btn btn-primary" style="flex: 1; min-width: 150px;">Ciudades</a>
+                <a th:href="@{/users}" class="btn btn-primary" style="flex: 1; min-width: 150px;">Usuarios</a>
+                <a th:href="@{/vehicles}" class="btn btn-primary" style="flex: 1; min-width: 150px;">Vehículos</a>
+                <a th:href="@{/disponibilidades}" class="btn btn-primary" style="flex: 1; min-width: 150px;">Disponibilidades</a>
+                <a th:href="@{/servicios}" class="btn btn-primary" style="flex: 1; min-width: 150px;">Servicios</a>
+            </div>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 15px 30px 0 30px;">
+                <a th:href="@{/comentarios}" class="btn btn-primary" style="flex: 1; min-width: 150px; max-width: 300px;">Ratings</a>
+                <a th:href="@{/puntos}" class="btn btn-primary" style="flex: 1; min-width: 150px; max-width: 300px;">Punto Geografico</a>
+                <a th:href="@{/stats}" class="btn btn-primary" style="flex:1; min-width:150px; max-width: 300px;">Estadísticas</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
